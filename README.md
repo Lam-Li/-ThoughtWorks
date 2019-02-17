@@ -1,4 +1,74 @@
-# -如果您有幸先打开这篇介绍：
-# -很抱歉，因为时间安排原因，我的代码只是完成了功能，连我自己都感觉很糟糕；
-# -如果可以，我会在2月17日下午3点前重新提交一份HomeWork；
-# -通过这个作业我学到了很多东西，无论结果如何我都感谢贵公司的这次机会；
+Problum2 by 李宗一
+Topic:Conference Track Management
+ 
+You are planning a big programming conference and have received many proposals which have passed the initial screen process but you're having trouble fitting them into the time constraints of the day -- there are so many possibilities! So you write a program to do it for you.
+
+    The conference has multiple tracks each of which has a morning and afternoon session.
+    Each session contains multiple talks.
+    Morning sessions begin at 9am and must finish before 12 noon, for lunch.
+    Afternoon sessions begin at 1pm and must finish in time for the networking event.
+    The networking event can start no earlier than 4:00 and no later than 5:00.
+    No talk title has numbers in it.
+    All talk lengths are either in minutes (not hours) or lightning (5 minutes).
+    Presenters will be very punctual; there needs to be no gap between sessions.
+
+ 
+Note that depending on how you choose to complete this problem, your solution may give a different ordering or combination of talks into tracks. This is acceptable; you don’t need to exactly duplicate the sample output given here.
+ 
+Test input:
+Writing Fast Tests Against Enterprise Rails 60min
+Overdoing it in Python 45min
+Lua for the Masses 30min
+Ruby Errors from Mismatched Gem Versions 45min
+Common Ruby Errors 45min
+Rails for Python Developers lightning
+Communicating Over Distance 60min
+Accounting-Driven Development 45min
+Woah 30min
+Sit Down and Write 30min
+Pair Programming vs Noise 45min
+Rails Magic 60min
+Ruby on Rails: Why We Should Move On 60min
+Clojure Ate Scala (on my project) 45min
+Programming in the Boondocks of Seattle 30min
+Ruby vs. Clojure for Back-End Development 30min
+Ruby on Rails Legacy App Maintenance 60min
+A World Without HackerNews 30min
+User Interface CSS in Rails Apps 30min
+ 
+Test output: 
+Track 1:
+09:00AM Writing Fast Tests Against Enterprise Rails 60min
+10:00AM Overdoing it in Python 45min
+10:45AM Lua for the Masses 30min
+11:15AM Ruby Errors from Mismatched Gem Versions 45min
+12:00PM Lunch
+01:00PM Ruby on Rails: Why We Should Move On 60min
+02:00PM Common Ruby Errors 45min
+02:45PM Pair Programming vs Noise 45min
+03:30PM Programming in the Boondocks of Seattle 30min
+04:00PM Ruby vs. Clojure for Back-End Development 30min
+04:30PM User Interface CSS in Rails Apps 30min
+05:00PM Networking Event
+ 
+Track 2:
+09:00AM Communicating Over Distance 60min
+10:00AM Rails Magic 60min
+11:00AM Woah 30min
+11:30AM Sit Down and Write 30min
+12:00PM Lunch
+01:00PM Accounting-Driven Development 45min
+01:45PM Clojure Ate Scala (on my project) 45min
+02:30PM A World Without HackerNews 30min
+03:00PM Ruby on Rails Legacy App Maintenance 60min
+04:00PM Rails for Python Developers lightning
+05:00PM Networking Event
+
+Thought： 通过搜索的方式，将会议内容和时间储存在一个Map里, 根据时间 通过遍历的方式 将他们安排在不同的Track中。
+Main为入口； 
+Tool类将日程储存进Map中；
+CreateSchedule类为创建并生成日程；
+
+
+代码有诸多不足，如生成日程时可用时间函数代替，敬请指导。
+    --一个渴望学习与成长的程序员
